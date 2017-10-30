@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
 
-    Button linner, table, relative;
+    Button linner, table, relative, grid, constraint;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +23,30 @@ public class MainActivity extends AppCompatActivity {
         table = (Button) findViewById(R.id.table);
         relative = (Button) findViewById(R.id.relative);
 
+        grid = (Button) findViewById(R.id.grid);
 
-            linner.setOnClickListener(new View.OnClickListener() {
+        constraint = (Button) findViewById(R.id.constraint);
+
+
+        grid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent inten =  new Intent(v.getContext(), GridLayoutActivity.class);
+                startActivity(inten);
+            }
+        });
+
+        constraint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent inten =  new Intent(v.getContext(), ConstraintLayoutActivity.class);
+                startActivity(inten);
+            }
+        });
+
+
+
+        linner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent inten = new Intent(v.getContext(), LinerLayoutActivity.class);

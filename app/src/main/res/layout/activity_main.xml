@@ -31,5 +31,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="relative" />
+
+        <Button
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Grid Layout" />
+
+        <Button
+            android:id="@+id/constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Constraint Layout" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
